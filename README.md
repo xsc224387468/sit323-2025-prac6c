@@ -13,5 +13,19 @@
 - node index.js
 The server will start and run at: http://localhost:3000
 
+//API endpoints
+- add
+Returns num1 + num2
+- subtract
+Returns num1 - num2
+- multiply
+Returns num1 * num2
+- divide
+Returns num1 / num2 (Error if num2 == 0)
+
+//Error Handling
+- If non-numeric values are provided, an error message is returned.
+- If division by zero is attempted, an appropriate error message is returned.
+
 //Author
 Shicheng Xiang
