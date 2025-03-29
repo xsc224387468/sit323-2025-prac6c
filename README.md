@@ -22,10 +22,18 @@ Returns num1 - num2
 Returns num1 * num2
 - divide
 Returns num1 / num2 (Error if num2 == 0)
+- power 
+Returns num1 ^ num2
+- sqrt 
+Returns sqrt(num1) (Error if num1 < 0)
+- modulo 
+Returns num1 % num2 (Error if num2 == 0)
 
 //Error Handling
 - If non-numeric values are provided, an error message is returned.
 - If division by zero is attempted, an appropriate error message is returned.
+- If you try to square a number less than zero, an error is returned.
+- If you try to take a modulus with a number equal to zero, an error is returned.
 
 //Author
 Shicheng Xiang
