@@ -35,5 +35,21 @@ Returns num1 % num2 (Error if num2 == 0)
 - If you try to square a number less than zero, an error is returned.
 - If you try to take a modulus with a number equal to zero, an error is returned.
 
+//docker
+- Install Docker
+- Clone or Use an Existing Project
+- Create a Dockerfile
+Define the base image, install dependencies, copy the app, and set the startup command.
+- Build the Docker Image
+docker build -t shichengxiang/sit323-calculator .
+- Create a docker-compose.yml file
+Define services, ports, and dependencies for containerized deployment.
+- Start the Application Using Docker Compose
+docker-compose up -d
+- Test the Application
+- Tag and Push the Docker Image to Docker Hub
+docker tag sit323-calculator shichengxiang/sit323-2025-prac5p:latest
+docker push shichengxiang/sit323-2025-prac5p:latest
+
 //Author
 Shicheng Xiang
