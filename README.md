@@ -51,5 +51,21 @@ docker-compose up -d
 docker tag sit323-calculator shichengxiang/sit323-2025-prac5p:latest
 docker push shichengxiang/sit323-2025-prac5p:latest
 
+//Google Cloud
+- This task demonstrates how to build, tag, and push a Node.js microservice to a private Google Artifact Registry using Docker.
+- Authenticate Docker with Artifact Registry
+gcloud auth configure-docker australia-southeast2-docker.pkg.dev
+- Build the Docker Image
+docker build -t sit323-calculator .
+- Tag the Docker Image
+docker tag sit323-calculator australia-southeast2-docker.pkg.dev/sit323-25t1-xiang-5c638ea/sit323-artifact/sit323-calculator
+- Push the Image to Artifact Registry
+docker push australia-southeast2-docker.pkg.dev/sit323-25t1-xiang-5c638ea/sit323-artifact/sit323-calculator
+- Run the Microservice from the Cloud Image
+docker run -p 3000:3000 australia-southeast2-docker.pkg.dev/sit323-25t1-xiang-5c638ea/sit323-artifact/sit323-calculator
+- Open browser and visit:
+http://localhost:3000
+
+
 //Author
 Shicheng Xiang
