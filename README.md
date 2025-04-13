@@ -66,6 +66,45 @@ docker run -p 3000:3000 australia-southeast2-docker.pkg.dev/sit323-25t1-xiang-5c
 - Open browser and visit:
 http://localhost:3000
 
+# SIT323 Task 6.1P - Kubernetes Deployment
+
+This task demonstrates how to deploy a containerized Node.js calculator microservice onto a Kubernetes cluster using a publicly hosted Docker image.
+
+---
+
+## Project Information
+
+- **Docker Image**: `shichengxiang/sit323-calculator:latest`
+- **Service Type**: NodePort
+- **Exposed Port**: `32658`
+- **App Port**: `3000`
+- **Deployed with**: Docker Desktop Kubernetes
+
+---
+
+## Files Included
+
+- `Dockerfile` – Docker image definition  
+- `index.js` – Node.js microservice  
+- `package.json` – Application dependencies  
+- `deployment.yaml` – Kubernetes deployment definition  
+- `service.yaml` – Kubernetes service definition  
+- `README.md` – Documentation
+
+---
+
+## How to Deploy the Microservice
+
+### 1. Start Kubernetes (Docker Desktop with Kubernetes enabled)
+
+Make sure Docker Desktop is running and Kubernetes is enabled in its settings.
+
+### 2. Apply the Deployment and Service YAML files
+
+```bash
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
 
 //Author
 Shicheng Xiang
