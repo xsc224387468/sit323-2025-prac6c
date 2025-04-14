@@ -105,6 +105,43 @@ Make sure Docker Desktop is running and Kubernetes is enabled in its settings.
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 
+# SIT323 Task 6.3C - Interacting with Kubernetes
+
+This task demonstrates how to interact with a deployed Kubernetes application using kubectl and port forwarding.
+
+---
+
+## Project Info
+
+- Image: `shichengxiang/sit323-calculator:latest`
+- Kubernetes service name: `calculator-service`
+- Exposed local port: `3000`
+
+---
+
+## Steps to Interact with the Application
+
+### 1. Check Pod and Service Status
+
+```bash
+kubectl get pods
+kubectl get services
+
+## 2. Use Port Forwarding
+bash
+
+kubectl port-forward service/calculator-service 3000:80
+This will forward local port 3000 to the Kubernetes service on port 80.
+
+## 3. Access in Browser
+Open:
+
+arduino
+http://localhost:3000
+Example API test:
+
+http://localhost:3000/add?num1=5&num2=2
+
 
 //Author
 Shicheng Xiang
