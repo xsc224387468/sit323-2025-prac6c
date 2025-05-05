@@ -142,6 +142,28 @@ Example API test:
 
 http://localhost:3000/add?num1=5&num2=2
 
+##  Step-by-Step Explanation
+
+### 1. `kubectl apply -f deployment.yaml`
+This command creates the Deployment in the Kubernetes cluster using the specified YAML file, which describes the app container, replicas, and image.
+
+### 2. `kubectl apply -f service.yaml`
+This creates a Kubernetes Service that exposes the deployed pods internally or externally (in this case, using NodePort).
+
+### 3. `kubectl get pods`
+Used to verify that the application pods have been created and are in the Running state.
+
+### 4. `kubectl get services`
+Displays the details of the created services, including the assigned NodePort for external access.
+
+### 5. `kubectl port-forward service/calculator-service 3000:80`
+This forwards port 80 of the Kubernetes service to port 3000 on my local machine, so I can access the app using `http://localhost:3000`.
+
+### 6. Access in Browser
+I visited `http://localhost:3000/add?num1=5&num2=2` to test the deployed calculator API and verify the response.
+
+
+
 
 //Author
 Shicheng Xiang
